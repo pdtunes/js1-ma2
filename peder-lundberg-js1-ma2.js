@@ -11,6 +11,10 @@ const myFunctionExpression = function() {
 
 myFunctionExpression();
 
+
+
+
+
 /* Question 2
 Refer: lesson 2
 The HTML in this question has been updated as it was causing a conflict with quesion 4. It doesn't have any effect on the required JavaScript.
@@ -27,12 +31,21 @@ function updateButton() {
 }
 
 
+
+
 /* Question 3
 Refer: lesson 2
 Select the input in the HTML below by its id. Add a keydown event listener. The callback function passed to the event listener should log the value of the key that was pressed.
 
 <input class="input" id="firstName"></div> */
 
+const input = document.querySelector("firstName");
+
+function callKeyDown() {
+  console.log("keydown");
+}
+
+input.addEventListener("keydown", callKeyDown);
 
 
 /* Question 4
@@ -44,10 +57,11 @@ Select the button in the HTML below by its tag. Add a mouseover event listener. 
 const button = document.querySelector(".btn");
 
 function callOnHover() {
-    console.log("The cursor moved over the button");
-};
+  console.log("The cursor moved over the button");
+}
 
 button.addEventListener("mouseover", callOnHover);
+
 
 
 
@@ -60,10 +74,11 @@ Select the button in the HTML below by its data attribute and add a mouseout eve
 const button = document.querySelector(".btn");
 
 function callMouseOut() {
-    console.log("The cursor moved away from the button");
-};
+  console.log("The cursor moved away from the button");
+}
 
 button.addEventListener("mouseout", callMouseOut);
+
 
 
 /* Question 6
@@ -77,3 +92,83 @@ The callback function should log the value of the data attribute on each element
     <li data-animal="frog">Animal 2</li>
     <li data-animal="elephant">Animal 3</li>
 </ul> */
+
+
+
+
+/* Question 7
+Refer: lesson 3
+Convert the if-else-if statement below to a switch statement. Use the code inside the else block in the default block in the switch.
+*/
+
+const animal = "cow";
+
+let arrayToLoopThrough;
+
+switch (animal) {
+  case "cat":
+    arrayToLoopThrough = animal;
+    break;
+
+  case "cow":
+    arrayToLoopThrough = animal;
+    break;
+
+  case "bird":
+    arrayToLoopThrough = animal;
+    break;
+
+  default:
+    arrayToLoopThrough = [];
+}
+
+/* Question 8
+Refer: lesson 4
+Convert the for loop code below to a forEach loop. */
+
+const sheep = ["Malcolm", "Anders", "Marie"];
+
+sheep.forEach(function(sheep) {
+  console.log(sheep);
+});
+
+
+/* Question 9
+Refer: lesson 4
+Create a timer that logs the word hello every half a second. It must stop after its logged the word 6 times. */
+
+function logTime() {
+
+    console.log("hello");
+
+  
+    if(counter === 6) {
+        clearInterval(intervalId);
+    }
+    counter++;
+
+}
+
+let counter = 1;
+
+const intervalId = setInterval(logTime, 500);
+
+
+
+
+/* Question 10
+Refer: lesson 4
+Select the div from the HTML below. Write code that updates the div's text to say Text updated after waiting 2 seconds. You can use either innerText or innerHTML to update the text. 
+*/
+
+<div class="container">Placeholder text</div> 
+
+const container = document.querySelector("container");
+
+function updateDiv() {
+    container.innerText = "Text updated"
+}
+setTimeout(updateDiv, 2000);
+
+
+
