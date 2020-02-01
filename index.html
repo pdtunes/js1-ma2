@@ -1,12 +1,12 @@
+<input class="input" id="firstName"></div> 
 
-<div class="container">Placeholder text</div> 
+<script src>
+const input = document.querySelector("firstName");
 
-<script>
-
-const container = document.querySelector("container");
-
-function updateDiv() {
-    container.innerText = "Text updated"
+function callKeyDown() {
+  console.log("keydown");
 }
-setTimeout(updateDiv, 2000);
+
+input.addEventListener("keydown", callKeyDown);
+
 </script>
