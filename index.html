@@ -1,12 +1,11 @@
-<input class="input" id="firstName"></div> 
+<input type="button" class="btn" value="Click me"> 
 
-<script src>
-const input = document.querySelector("firstName");
+<script>  
+const button = document.querySelector(".btn");
 
-function callKeyDown() {
-  console.log("keydown");
+button.addEventListener("click", updateButton);
+function updateButton() {
+  console.log("It was clicked");
 }
-
-input.addEventListener("keydown", callKeyDown);
 
 </script>

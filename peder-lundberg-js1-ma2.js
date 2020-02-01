@@ -43,9 +43,10 @@ const input = document.querySelector("firstName");
 
 function callKeyDown() {
   console.log("keydown");
+  input.addEventListener("keydown", callKeyDown);
 }
 
-input.addEventListener("keydown", callKeyDown);
+
 
 
 /* Question 4
