@@ -1,11 +1,12 @@
-<input type="button" class="btn" value="Click me"> 
+<div class="container">Placeholder text</div> 
 
-<script>  
-const button = document.querySelector(".btn");
+<script>
 
-button.addEventListener("click", updateButton);
-function updateButton() {
-  console.log("It was clicked");
+const container_div = document.querySelector(".container");
+
+function updateDiv() {
+    container_div.innerText = "Text updated"
 }
+setTimeout(updateDiv, 2000);
 
 </script>
